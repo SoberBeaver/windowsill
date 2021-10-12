@@ -1,6 +1,6 @@
 package entity;
 
-public class Groot extends Plant {
+public class Groot extends Plant implements CanSpeak, CanDance {
     String name = "Грут";
     String genus = "Flora colossus";
     private boolean grootIsGone = false;
@@ -11,14 +11,14 @@ public class Groot extends Plant {
         minWaterLevelNeededForGrow = 5;
         waterNeededForGrow = 4;
         growSpeed = 5;
-        System.out.printf("Посажен новый %s\n", name);
+        System.out.printf("~~~~Посажен новый %s~~~~\n", name);
     }
 
     @Override
     public void showPlantState() {
         System.out.println("------------------");
         System.out.printf("%s, род %s\n", name, genus);
-        String msg = null;
+        String msg;
         if (!grootIsGone) {
             msg = String.format("Высота: %d, уровень воды: %d, минимальный уровень воды для роста: %d\n",
                     height,
@@ -27,7 +27,7 @@ public class Groot extends Plant {
         } else {
             msg = String.format("%s вырос и ушёл из горшка!\n", name);
         }
-        System.out.printf(msg);
+        System.out.print(msg);
         System.out.println("------------------");
     }
 
@@ -48,11 +48,13 @@ public class Groot extends Plant {
         }
     }
 
-    public void dance(){
-        System.out.printf("%s танцует 〜(꒪꒳꒪)〜\n", name);
-    }
-
+    @Override
     public void say(){
         System.out.printf("Я есть %s\n", name);
+    }
+
+    @Override
+    public void dance() {
+        System.out.printf("%s танцует 〜(꒪꒳꒪)〜\n", name);
     }
 }

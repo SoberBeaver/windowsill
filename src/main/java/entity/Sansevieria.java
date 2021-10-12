@@ -9,7 +9,7 @@ public class Sansevieria extends Plant {
         this.minWaterLevelNeededForGrow = 4;
         this.growSpeed = 2;
         this.waterNeededForGrow = 2;
-        System.out.printf("Посажена новая %s\n", name);
+        System.out.printf("~~~~Посажена новая %s~~~~\n", name);
     }
 
     @Override

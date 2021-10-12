@@ -12,7 +12,7 @@ public class Orchid extends Plant {
         if (height >= blossomThreshold) {
             this.blossom = true;
         }
-        System.out.printf("Посажена новая %s\n", name);
+        System.out.printf("~~~~Посажена новая %s~~~~\n", name);
     }
 
     @Override
