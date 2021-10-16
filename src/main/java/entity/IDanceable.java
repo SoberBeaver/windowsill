@@ -1,5 +1,5 @@
 package entity;
 
-public interface CanDance {
+public interface IDanceable {
     void dance();
 }

@@ -1,6 +1,6 @@
 package entity;
 
-public class Groot extends Plant implements CanSpeak, CanDance {
+public class Groot extends Plant implements ISpeakable, IDanceable {
     String name = "Грут";
     String genus = "Flora colossus";
     private boolean grootIsGone = false;

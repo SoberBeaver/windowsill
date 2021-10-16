@@ -1,5 +1,5 @@
 package entity;
 
-public interface CanSpeak {
+public interface ISpeakable {
      void say();
 }

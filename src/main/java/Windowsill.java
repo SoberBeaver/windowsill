@@ -1,18 +1,15 @@
-import entity.Color;
-import entity.Orchid;
-import entity.Sansevieria;
-import entity.Groot;
+import entity.*;
 
 public class Windowsill {
     public static void main(String[] args) {
-        Orchid orchid = new Orchid(2, 2, Color.WHITE);
+        Plant orchid = new Orchid(2, 2, Color.WHITE);
         orchid.showPlantState();
         orchid.grow();
         orchid.toWater(10);
         orchid.grow();
         orchid.showPlantState();
 
-        Sansevieria sansevieria = new Sansevieria(2, 3, Color.BROWN);
+        Plant sansevieria = new Sansevieria(2, 3, Color.BROWN);
         sansevieria.showPlantState();
         sansevieria.grow();
         sansevieria.toWater();
@@ -21,9 +18,10 @@ public class Windowsill {
 
         Groot groot = new Groot(7, 4, Color.GREEN);
         groot.showPlantState();
-        groot.toWater(15);
-        groot.say();
-        groot.dance();
+
+        Groot castedGroot = groot;
+        castedGroot.say();
+        castedGroot.dance();
         groot.grow();
         groot.grow();
         groot.showPlantState();
